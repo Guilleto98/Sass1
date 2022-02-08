@@ -1,0 +1,433 @@
+@charset "UTF-8";
+@import url("variables.scss");
+* {
+  padding: 0px;
+  margin: 0px; }
+
+/* CODIGO DEL INDEX*/
+/*---- HEADER*/
+header {
+  display: flex;
+  width: 100%;
+  height: 350px;
+  background: #E6DDC4;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*nav ul li{
+    border-radius: 3px;
+    padding: 10px;
+    background: #262A33;
+    text-decoration: none;
+    margin: 5px;
+    list-style-type: none;
+  
+  }
+
+  nav ul li a{
+    text-decoration: none;
+    color: #9D7857;
+    font-size: 20px;
+  }
+
+  nav ul li:hover{
+    background:#484854;
+  }*/
+/*---- MAIN INDEX*/
+.mainIndex {
+  display: grid;
+  background: #3A3A49;
+  width: 100%;
+  height: 1010px;
+  grid-template-areas: 'oferta'
+ 'parrafo'
+ 'img'
+ 'envios';
+  grid-template-rows: 200px
+ 300px
+ 310px
+ 200px;
+  justify-content: space-around;
+  
+}
+  .mainIndex .oferta {
+    display: flex;
+    grid-area: oferta;
+    align-items: center;
+    justify-content: center; }
+
+.oferta div {
+  background-color: #E6DDC4;
+  padding: 20px;
+  margin: 10px;
+  font-size: 15px; }
+
+.oferta div:hover {
+  background-color: #ec3a3a;
+  font-size: 18px; }
+
+.oferta div a:hover {
+  color: white;
+  font-size: 20px; }
+
+.oferta div a {
+  text-decoration: none;
+  color: #754e2a; }
+
+.parrafo {
+  display: flex;
+  background-color: #E6DDC4;
+  padding: 10px; }
+
+.parrafo {
+  display: flex;
+  grid-area: parrafo;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+
+.parrafo div {
+  font-size: 30px;
+  color: #754e2a; }
+
+.img1 {
+  grid-area: img;
+  display: flex;
+  width: 100%;
+  height: 100%; }
+
+.img1 img {
+  width: 100%;
+  height: 100%; }
+
+.envios {
+  grid-area: envios;
+  display: flex;
+  color: #aa8058;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center; }
+
+.envios ul li {
+  list-style-type: none; }
+
+.envDom {
+  font-size: 25px;
+  text-align: center;
+  margin: 10px; }
+
+/*---- FOOTER INDEX*/
+footer {
+  display: flex;
+  width: 100%;
+  height: 150px;
+  background-color: #E6DDC4;
+  font-size: 25px;
+  align-items: center;
+  justify-content: center;
+  color: #23232c; }
+
+/*------ MEDIA QUERIS*/
+@media (min-width: 600px) {
+  header {
+    height: 300px;
+    flex-direction: row; }
+  .nav {
+    display: flex;
+    height: 100px;
+    width: 500px; }
+  .nav ul {
+    display: flex;
+    align-items: center; }
+  .img1 img {
+    width: 500px; }
+  .img1 {
+    justify-content: center; } }
+
+@media (min-width: 900px) {
+  .mainIndex {
+    height: 810px;
+    grid-template-areas: 'oferta oferta'
+ 'parrafo img'
+ 'envios envios';
+    grid-template-rows: 200px
+ 300px
+ 310px; }
+  .parrafo {
+    align-items: center; } }
+
+@media (min-width: 1100px) {
+  header {
+    justify-content: space-between; } }
+
+/* CODIGO DEL CATALOGO*/
+.mainCatalogo {
+  display: grid;
+  width: 100%;
+  height: 1400px;
+  background-color: #3A3A49;
+  grid-template-areas: 'codDesc'
+ 'mates'
+ 'bombillas'
+ 'materas'
+ 'cuchillos'
+ 'termos'
+ 'outfits';
+  grid-template-rows: 200px
+ 200px
+ 200px
+ 200px
+ 200px
+ 200px
+ 200px;
+  justify-items: center;
+  align-items: center; }
+
+.ofertaCat {
+  display: flex;
+  grid-area: codDesc;
+  align-items: center;
+  justify-content: center; }
+
+.ofertaCat div {
+  background-color: #E6DDC4;
+  padding: 20px;
+  margin: 10px;
+  font-size: 15px; }
+
+.ofertaCat div:hover {
+  background-color: #ec3a3a;
+  font-size: 18px; }
+
+.ofertaCat div a:hover {
+  color: white;
+  font-size: 20px; }
+
+.ofertaCat div a {
+  text-decoration: none;
+  color: #754e2a; }
+
+.imgMates {
+  grid-area: mates; }
+
+span p {
+  font-size: 20px;
+  background-color: #9D7857;
+  text-align: center;
+  color: #171b24; }
+
+.imgBombillas {
+  grid-area: bombillas; }
+
+.imgMateras {
+  grid-area: materas; }
+
+.imgCuchillos {
+  grid-area: cuchillos; }
+
+.imgTermos {
+  grid-area: termos; }
+
+.imgOutfits {
+  grid-area: outfits; }
+
+/*------ MEDIA QUERIS CATALOGO*/
+@media (min-width: 600px) {
+  .mainCatalogo {
+    height: 800px;
+    grid-template-areas: 'codDesc  codDesc'
+ 'mates    bombillas'
+ 'materas  cuchillos'
+ 'termos   outfits';
+    grid-template-rows: 200px
+ 200px
+ 200px
+ 200px; } }
+
+@media (min-width: 900px) {
+  .mainCatalogo {
+    height: 1200px;
+    grid-template-rows: 200px
+ 300px
+ 300px
+ 300px; }
+  .mainCatalogo span {
+    width: 250px; }
+  .mainCatalogo span img {
+    width: 100%; } }
+
+@media (min-width: 900px) {
+  .mainCatalogo {
+    height: 1650px;
+    grid-template-rows: 200px
+ 400px
+ 400px
+ 400px; }
+  .mainCatalogo span {
+    width: 280px; }
+  .mainCatalogo span img {
+    width: 100%; }
+  .ofertaCat {
+    width: 1000px;
+    justify-content: space-evenly; } }
+
+.maintrabajos {
+  display: grid;
+  background-color: #262A33;
+  width: 100%;
+  height: 1900px;
+  grid-template-areas: 'trabajo1'
+ 'trabajo2'
+ 'trabajo3' 
+ 'trabajo4'
+ 'trabajo5'
+ 'trabajo6';
+  grid-template-rows: 300px 
+ 300px
+ 300px
+ 300px
+ 300px
+ 300px;
+  grid-template-columns: 300px;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  justify-items: center;
+  align-items: center; }
+
+.maintrabajos div img:hover {
+  width: 320px;
+  padding: 10px;
+  cursor: pointer; }
+
+/*---- SECCIÓN CLIENTES----*/
+.mainClientes {
+  display: grid;
+  width: 100%;
+  height: 700px;
+  background-color: #262A33;
+  grid-template-areas: 'img1'
+ 'parrafo';
+  grid-template-rows: 400px 
+ 200px;
+  grid-template-columns: 400px;
+  justify-items: center;
+  align-items: center;
+  justify-content: center; }
+
+.mainClientes div {
+  grid-area: img1;
+  width: 220px; }
+
+section p {
+  color: #E6DDC4;
+  font-size: 25px;
+  padding: 5px; }
+
+.mainClientes section h3 {
+  color: #E6DDC4;
+  font-size: 30px;
+  padding: 5px; }
+
+footer {
+  display: flex;
+  width: 100%;
+  height: 150px;
+  background-color: #E6DDC4;
+  font-size: 25px;
+  align-items: center;
+  justify-content: center;
+  color: #23232c; }
+
+.mainContacto {
+  background: url(../img/contacto.jpg);
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed; }
+
+.contenedor .form .form-header .form-title {
+  font-weight: normal;
+  font-family: sans-serif;
+  font-size: 45px;
+  color: #ff851b;
+  text-align: center;
+  padding: 15px 0px; }
+
+.contenedor .form .form-header .form-title span {
+  color: #f5f0ec; }
+
+.contenedor .form {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 90%;
+  max-width: 650px;
+  margin: auto;
+  padding: 5px 35px;
+  padding-bottom: 30px;
+  border-radius: 3px; }
+
+.contenedor .form .form-label {
+  display: block;
+  color: #ff851b;
+  font-size: 16px;
+  position: relative; }
+
+.contenedor .form .form-input, .form-textarea {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #ff851b;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  font-size: 14px;
+  color: #fff; }
+
+.contenedor .form .form-textarea {
+  resize: vertical;
+  max-height: 150px;
+  min-height: 50px; }
+
+.contenedor .form .btn-submit {
+  width: 100%;
+  outline: none;
+  background-color: #ff851b;
+  font-size: 16px;
+  border: none;
+  color: #fff;
+  padding: 15px 0;
+  cursor: pointer; }
+
+.contenedor .form .btn-submit:hover {
+  background-color: #5b49fc; }
+
+@media (min-width: 600px) {
+  header {
+    height: 300px;
+    flex-direction: row; }
+  .nav {
+    display: flex;
+    height: 100px;
+    width: 500px; }
+  .nav ul {
+    display: flex;
+    align-items: center; }
+  .img1 img {
+    width: 500px; }
+  .img1 {
+    justify-content: center; }
+  .maintrabajos {
+    height: 800px;
+    grid-template-areas: 'img1 img2'
+ 'img3 img4'
+ 'img5 img6';
+    grid-template-columns: 250px 250px;
+    grid-template-rows: 250px
+ 250px
+ 250px; } }
+
+@media (min-width: 1100px) {
+  header {
+    justify-content: space-between; } }
