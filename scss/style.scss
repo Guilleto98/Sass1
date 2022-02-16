@@ -1,4 +1,6 @@
-@import url('variables.scss');
+@import '_variables.scss';
+@import '_mixin.scss';
+
 
 *{
     padding: 0px;
@@ -41,9 +43,7 @@
 /*---- MAIN INDEX*/
 
  .mainIndex{
-  display: grid;
-  background: $colordeFondo2;
-  width: 100%;
+  @include index;
   height: 1010px;
   grid-template-areas:
             'oferta'
@@ -56,33 +56,40 @@
        310px
        200px;
        justify-content: space-around;
+
        .oferta{
-          display: flex;
-          grid-area: oferta;
-          align-items: center;
-          justify-content: center;
-          & div:hover{
-            background-color: #ec3a3a;
-            font-size: 18px;
-          }
-          & div a:hover{
-              color: white;
-              font-size: 20px;
-          }
-          
-           .oferta div{
-             background-color: $colorDeFondo1 ;
-             padding: 20px;
-             margin: 10px;
-             font-size: 15px;
-           }
+        display: flex;
+        grid-area: oferta;
+        align-items: center;
+        justify-content: center;
+        
+        & div:hover{
+          background-color: $colorOfertaCat;
+          font-size: 18px;
         }
+      
+        & div a:hover{
+            color: $colorFormTitle;
+            font-size: 20px;
+        }
+        
+        & div{
+           background-color: $colorDeFondo1 ;
+           padding: 20px;
+           margin: 10px;
+           font-size: 15px;
+         }
+      }
+      
+      
+       .oferta div a{
+         text-decoration: none;
+         color: $colorOfertCatA;
+       }
+       
  }
 
- .oferta div a{
-   text-decoration: none;
-   color: #754e2a;
- }
+
 
 
  .parrafo{
@@ -94,9 +101,9 @@
    justify-content: center;
    flex-direction: column;
    
-   .parrafo div{
+   & div{
      font-size: 30px;
-     color: #754e2a;
+     color: $colorOfertCatA;
    }
  }
 
@@ -115,7 +122,7 @@
  .envios{
    grid-area: envios;
    display: flex;
-   color:#aa8058;
+   color:$colorSpanP;
    font-size: 20px;
    align-items: center;
    justify-content: center;
@@ -205,10 +212,11 @@
 /* CODIGO DEL CATALOGO*/
 
 .mainCatalogo{
-  display: grid;
-  width: 100%;
+
+  @include index;
+
   height: 1400px;
-  background-color: $colordeFondo2;
+
   grid-template-areas: 
            'codDesc'
            'mates'
@@ -245,18 +253,18 @@
 }
 
 .ofertaCat div:hover{
-  background-color: #ec3a3a;
+  background-color: $colorOfertaCat;
   font-size: 18px;
 }
 
 .ofertaCat div a:hover{
-  color: white;
+  color: $colorFormTitle;
   font-size: 20px;
 }
 
 .ofertaCat div a{
   text-decoration: none;
-  color: #754e2a;
+  color: $colorOfertCatA;
 }
 
 
@@ -266,9 +274,9 @@
 
 span p{
   font-size: 20px;
-  background-color: #9D7857;
+  background-color: $colorSpanP;
   text-align: center;
-  color: #171b24 ;
+  color: $colorLetraSpanP ;
 }
 
 .imgBombillas{
@@ -355,9 +363,7 @@ span p{
 }
 
 .maintrabajos{ 
-  display: grid; 
-  background-color: $colordeFondo2 ; 
-  width: 100%; 
+  @include index;
   height: 1900px; 
   grid-template-areas: 
             'trabajo1'
@@ -441,7 +447,7 @@ footer{
 //---SECCIÓN CONTACTO
 
 .mainContacto{
-    background: url(../img/contacto.jpg);
+    background: url(../img/contacto.png);
     -webkit-background-size: cover;
     background-size: cover;
     background-attachment: fixed;
@@ -457,11 +463,11 @@ footer{
 }
 
 .contenedor .form .form-header .form-title span{
-    color: #f5f0ec;
+    color: $colorFormTitle;
 }
 
 .contenedor .form{
-    background-color: rgba(0,0,0,.6);
+    background-color: $colorContenedorForm;
     width: 90%;
     max-width: 650px;
     margin: auto;
@@ -479,7 +485,7 @@ footer{
 
 
 .contenedor .form .form-input, .form-textarea{
-     background-color: rgba(0,0,0,.7);
+     background-color: $colorContenedorForm;
      border: none;
      outline: none;
      border-bottom: 2px solid $colorFormulario;
@@ -488,7 +494,7 @@ footer{
      margin-bottom: 20px;
      border-radius: 2px;
      font-size: 14px;
-     color: #fff;
+     color: $colorFormTitle;
 }
 
 
@@ -506,13 +512,13 @@ footer{
   background-color: $colorFormulario;
   font-size: 16px;
   border: none;
-  color: #fff;
+  color: $colorFormTitle;
   padding: 15px 0;
   cursor: pointer;
 }
 
 .contenedor .form .btn-submit:hover{
-  background-color: #5b49fc;
+  background-color: $colorBtnSubmit;
 }
 
 
